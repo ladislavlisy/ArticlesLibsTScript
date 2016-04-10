@@ -5,13 +5,16 @@
 ///<reference path='../typings/should/should.d.ts'/>
 ///<reference path='../typings/mocha/mocha.d.ts'/>
 
-require('should');
-var ns = require('../../lib/Payrollee.Common');
+require("should");
 
-describe('TestLibrary', () => {
+import * as ns from "../LibraryCode/Playground";
 
-    it('Should_Return_53_For_Articles_Length', () => {
-         true.should.equal(testSymbolOne.isEqualToSymbol(testSymbolTwo));
+describe("TestLibrary", () => {
+
+    it("Should_Return_53_For_Articles_Length", () => {
+        let articlesAll: Array<ns.Article> = ns.Configure.ConfigureArticles();
+        let expected = 53;
+        expected.should.equal(articlesAll.length);
     });
 
 });
